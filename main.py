@@ -109,7 +109,7 @@ async def set_language(client, message: Message):
 async def handle_media(client, message: Message):
     uid = message.from_user.id
     lang = user_lang.get(uid, "en")
-    await message.reply_text("Media received. Downloading...")
+    await message.reply_text("Downloading...")
     ext = ""
     if message.audio:
         ext = ".mp3"
@@ -132,7 +132,7 @@ async def handle_media(client, message: Message):
     except Exception as e:
         await message.reply_text(f"Transcription error: {e}")
         return
-    await message.reply_text(f"✅ Transcription result:\n\n{text}")
+    await message.reply_text(f"{text}\n\nPowered by @MediaToTextBot")
 
 if __name__ == "__main__":
     app.run()

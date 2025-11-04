@@ -15,7 +15,7 @@ flask_app = Flask(__name__)
 def keep_alive(): return "Bot is alive ✅", 200
 def run_flask(): flask_app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
 
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "YOUR_GEMINI_API_KEY_HERE")
+GEMINI_API_KEY = "AIzaSyD0sYw4zzlXhbSV3HLY9wM4zCqX8ytR8zQ"
 API_ID = 29169428
 API_HASH = "55742b16a85aac494c7944568b5507e5"
 BOT_TOKEN = "7920977306:AAHhFpv2ImMsiowjpm288ebRdxAjoJZwWec"

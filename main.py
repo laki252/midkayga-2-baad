@@ -134,7 +134,7 @@ async def handle_media(client, message: Message):
     mode = user_mode.get(uid, "📄 Text File")
 
     try:
-        await client.send_reaction(chat_id=message.chat.id, message_id=message.id, emoji="👀", big=True)
+     await message.reply_text("👀")   
     except Exception:
         pass
 

@@ -167,7 +167,7 @@ async def handle_text(client, message: Message):
     uid = message.from_user.id
     if text in ["💬 Split messages", "📄 Text File"]:
         user_mode[uid] = text
-        await message.reply_text(f"Output mode set to: **{text}**")
+        #await message.reply_text(f"Output mode set to: **{text}**")
         return
 
 @app.on_message(filters.private & (filters.audio | filters.voice | filters.video | filters.document))

@@ -113,7 +113,7 @@ async def start(client, message: Message):
     if row:
         buttons.append(row)
     keyboard = ReplyKeyboardMarkup(buttons, resize_keyboard=True, one_time_keyboard=True)
-    await message.reply_text("Choose your **language**:", reply_markup=keyboard)
+    await message.reply_text("Choose your File language from the keyboard below**:", reply_markup=keyboard)
 
 @app.on_message(filters.command("mode") & filters.private)
 async def choose_mode(client, message: Message):

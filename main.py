@@ -62,7 +62,7 @@ def ask_gemini(text, instruction, timeout=REQUEST_TIMEOUT_GEMINI):
     if not GEMINI_API_KEY:
         raise RuntimeError("GEMINI_API_KEY not set")
     try:
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={GEMINI_API_KEY}"
         payload = {"contents": [{"parts": [{"text": instruction}, {"text": text}]}]}
         headers = {"Content-Type": "application/json"}
         resp = requests.post(url, headers=headers, json=payload, timeout=timeout)

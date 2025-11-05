@@ -6,7 +6,6 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.enums import ChatAction
 import assemblyai as aai
-from google import genai
 from collections import defaultdict
 import time
 from threading import Lock

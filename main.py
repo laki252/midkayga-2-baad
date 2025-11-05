@@ -127,7 +127,7 @@ async def lang_command(client, message: Message):
     if row:
         buttons.append(row)
     keyboard = InlineKeyboardMarkup(buttons)
-    await message.reply_text("Choose language:", reply_markup=keyboard)
+    await message.reply_text("**Choose your file language for transcription using the below buttons:**", reply_markup=keyboard)
 
 @app.on_callback_query(filters.regex(r"^lang\|"))
 async def language_callback_query(client, callback_query):

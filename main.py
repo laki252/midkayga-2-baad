@@ -25,7 +25,7 @@ API_ID = 29169428
 API_HASH = "55742b16a85aac494c7944568b5507e5"
 BOT_TOKEN = "7770743573:AAF9mwgq3efTrJ5iaXQu5VVfnFijUxPsAsg"
 ASSEMBLYAI_API_KEY = "91f15c103dbd4b859466a29ee849e3ef"
-GEMINI_API_KEY = "AIzaSyD0sYw4zzlXhbSV3HLY9wM4zCqX8ytR8zQ"
+GEMINI_API_KEY = "AIzaSyAKrnVxMMPIqSzovoUggXy5CQ_4Hi7I_NU"
 REQUEST_TIMEOUT_GEMINI = 300
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')

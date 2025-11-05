@@ -77,11 +77,11 @@ async def send_subscription_message(chat_id):
         return
     kb = InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton("Click here to join the Group", url=f"https://t.me/{REQUIRED_CHANNEL.lstrip('@')}")]
+            [InlineKeyboardButton("Click here to join the Channel", url=f"https://t.me/{REQUIRED_CHANNEL.lstrip('@')}")]
         ]
     )
     try:
-        await app.send_message(chat_id, "🔒 Access Locked You cannot use this bot until you join the Group.", reply_markup=kb)
+        await app.send_message(chat_id, "🔒 Access Locked You cannot use this bot until you join the Channel.", reply_markup=kb)
     except:
         pass
 

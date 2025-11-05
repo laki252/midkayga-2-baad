@@ -69,11 +69,11 @@ def ask_gemini(text: str, instruction: str, timeout: int = REQUEST_TIMEOUT_GEMIN
     raise RuntimeError(json.dumps(result))
 
 def clean_up_text(text: str, lang_code: str) -> str:
-    instruction = f"Clean and normalize this transcription (lang={lang_code}). Remove ASR artifacts and filler noises. Produce clean readable text."
+    instruction = f"Clean and normalize this transcription (lang={lang_code}). Remove ASR artifacts like [inaudible], repeated words, filler noises, timestamps, and incorrect punctuation. Produce a clean, well-punctuated, readable text in the same language. Do not add introductions or explanations."
     return ask_gemini(text, instruction)
 
 def summarize_text(text: str, lang_code: str) -> str:
-    instruction = f"Summarize this text into (lang={lang_code}) without introductions or notes."
+    instruction = f"What is this report and what is it about? Please summarize them for me into (lang={lang_code}) without adding any introductions, notes, or extra phrases."
     return ask_gemini(text, instruction)
 
 async def download_media(message: Message, file_path: str) -> str:

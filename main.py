@@ -126,7 +126,7 @@ async def ensure_joined(client, obj) -> bool:
         reply_target = obj
     if not await is_user_in_channel(client, uid):
         kb = InlineKeyboardMarkup([[InlineKeyboardButton("🔗 Join Channel", url=f"https://t.me/{REQUIRED_CHANNEL.strip('@')}")]])
-        text = f"🚫 Ku biir channelka {REQUIRED_CHANNEL} si aad u isticmaasho botkan."
+        text = f"🚫 First join the channel {REQUIRED_CHANNEL} to use this bot"
         try:
             if isinstance(obj, CallbackQuery):
                 try:

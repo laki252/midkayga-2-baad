@@ -153,8 +153,8 @@ async def language_callback_query(client, callback_query):
     uid = callback_query.from_user.id
     if not await is_user_in_channel(client, uid):
         kb = InlineKeyboardMarkup([[InlineKeyboardButton("🔗 Join Channel", url=f"https://t.me/{REQUIRED_CHANNEL.strip('@')}")]])
-        await callback_query.answer("Ku biir channel-ka si aad u isticmaasho.", show_alert=True)
-        await callback_query.message.reply_text(f"🚫 Ku biir channelka {REQUIRED_CHANNEL} si aad u isticmaasho botkan.", reply_markup=kb)
+        await callback_query.answer("Join the channel to use it", show_alert=True)
+        await callback_query.message.reply_text(f"🚫 First Join the channel {REQUIRED_CHANNEL} to use this bot.", reply_markup=kb)
         return
     try:
         parts = callback_query.data.split("|")

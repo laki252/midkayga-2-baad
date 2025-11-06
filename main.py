@@ -26,7 +26,7 @@ REQUEST_TIMEOUT_ASSEMBLYAI = int(os.environ.get("REQUEST_TIMEOUT_ASSEMBLYAI", "3
 TELEGRAM_MAX_BYTES = int(os.environ.get("TELEGRAM_MAX_BYTES", str(2 * 1024 * 1024 * 1024)))
 ASSEMBLYAI_API_KEY = os.environ.get("ASSEMBLYAI_API_KEY", os.environ.get("ASSEMBLYAI_API_KEYS", "91f15c103dbd4b859466a29ee849e3ef"))
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", os.environ.get("GEMINI_API_KEYS", "AIzaSyDCOMrP8YYSr5t8N7WZoMLQnKOQR4ByTvo"))
-ASSEMBLYAI_API_KEYS = [t.strip() for t in os.environ.get("ASSEMBLYAI_API_KEYS", ASSEMBLYAI_API_KEY).split(",") if t.strip()]
+#ASSEMBLYAI_API_KEYS = [t.strip() for t in os.environ.get("ASSEMBLYAI_API_KEYS", ASSEMBLYAI_API_KEY).split(",") if t.strip()]
 GEMINI_API_KEYS = [t.strip() for t in os.environ.get("GEMINI_API_KEYS", GEMINI_API_KEY).split(",") if t.strip()]
 ASSEMBLYAI_BASE_URL = "https://api.assemblyai.com/v2"
 

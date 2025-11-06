@@ -132,7 +132,7 @@ async def ensure_joined(client, obj) -> bool:
         try:
             if isinstance(obj, CallbackQuery):
                 try:
-                    await obj.answer("Ku biir channel-ka si aad u isticmaasho.", show_alert=True)
+                    await obj.answer("🚫 First join the channel", show_alert=True)
                 except Exception:
                     pass
             await reply_target.reply_text(text, reply_markup=kb)

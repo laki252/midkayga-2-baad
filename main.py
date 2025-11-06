@@ -183,7 +183,7 @@ async def ensure_joined(client, obj) -> bool:
         try:
             if isinstance(obj, CallbackQuery):
                 try:
-                    await obj.answer("Ku biir channel-ka si aad u isticmaasho.", show_alert=True)
+                    await obj.answer("🚫 First join the channel ", show_alert=True)
                 except Exception:
                     pass
             await reply_target.reply_text(text, reply_markup=kb)
@@ -315,7 +315,7 @@ async def handle_media(client, message: Message):
         file_size = getattr(message.document, "file_size", None)
         safe_ext = ext.lstrip(".").lower()
         if safe_ext and safe_ext not in ALLOWED_EXTENSIONS:
-            await message.reply_text("Sorry, I can only transcribe audio or video files.", reply_to_message_id=message.id)
+            await message.reply_text("File formet not support", reply_to_message_id=message.id)
             return
     if file_size and file_size > TELEGRAM_MAX_BYTES:
         max_mb = TELEGRAM_MAX_BYTES // (1024 * 1024)

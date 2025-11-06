@@ -20,7 +20,7 @@ def run_flask():
 
 API_ID = int(os.environ.get("API_ID", "29169428"))
 API_HASH = os.environ.get("API_HASH", "55742b16a85aac494c7944568b5507e5")
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "7757263177:AAEJy_de-IOP11BOrgY0HMj-cvhy_CezGDU")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "7790991731:AAF4NHGm0BJCf08JTdBaUWKzwfs82_Y9Ecw")
 REQUEST_TIMEOUT_GEMINI = int(os.environ.get("REQUEST_TIMEOUT_GEMINI", "300"))
 REQUEST_TIMEOUT_ASSEMBLYAI = int(os.environ.get("REQUEST_TIMEOUT_ASSEMBLYAI", "300"))
 TELEGRAM_MAX_BYTES = int(os.environ.get("TELEGRAM_MAX_BYTES", str(2 * 1024 * 1024 * 1024)))

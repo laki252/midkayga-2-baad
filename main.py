@@ -292,7 +292,7 @@ async def ensure_joined(client, obj) -> bool:
         uid = obj.from_user.id
         reply_target = obj
     count = user_usage_count.get(uid, 0)
-    if count < 3:
+    if count < 5:
         user_usage_count[uid] = count + 1
         return True
     try:

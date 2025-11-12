@@ -4,3 +4,4 @@ assemblyai
 aiohttp
 requests
 Flask
+pyTelegramBotAPI

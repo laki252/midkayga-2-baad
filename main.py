@@ -480,8 +480,8 @@ def webhook():
         abort(403)
 
 if __name__ == "__main__":
-    WEBHOOK_URL = os.environ.get("WEBHOOK_URL")
-    PORT = int(os.environ.get("PORT", "8443"))
+    WEBHOOK_URL = os.environ.get("https://midkayga-2-baad-1ggd.onrender.com")
+    PORT = int(os.environ.get("PORT", "5000"))
     if not WEBHOOK_URL:
         raise SystemExit("WEBHOOK_URL environment variable is required")
     try:

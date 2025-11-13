@@ -6,3 +6,4 @@ requests
 Flask
 pyTelegramBotAPI
 motor
+pymongo

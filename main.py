@@ -186,7 +186,7 @@ def ask_gemini(text, instruction, timeout=REQUEST_TIMEOUT_GEMINI):
 
 def build_action_keyboard(chat_id, message_id, text_length):
     buttons = []
-    buttons.append([InlineKeyboardButton("⭐️Clean transcript", callback_data=f"clean|{chat_id}|{message_id}")])
+    #buttons.append([InlineKeyboardButton("⭐️Clean transcript", callback_data=f"clean|{chat_id}|{message_id}")])
     if text_length > 1000:
         buttons.append([InlineKeyboardButton("Get Summarize", callback_data=f"summarize|{chat_id}|{message_id}")])
     return InlineKeyboardMarkup(buttons)

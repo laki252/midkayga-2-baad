@@ -230,7 +230,7 @@ HELP_MESSAGE = f"""Commands supported:
 /mode  - Change result delivery mode
 /help  - This help message
 
-Send a voice/audio/video (up to {MAX_UPLOAD_MB}MB) and I will transcribe it news updates more help ➡️https://t.me/laaaaaaaaalaaaaaa
+Send a voice/audio/video (up to {MAX_UPLOAD_MB}MB) and I will transcribe it News & updates ➡️ @ejbots
 """
 
 async def is_user_in_channel(client, user_id: int) -> bool:

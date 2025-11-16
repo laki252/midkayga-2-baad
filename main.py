@@ -472,12 +472,12 @@ async def clean_up_callback(client, callback_query: CallbackQuery):
     usage_key = f"{chat_id}|{msg_id}|clean"
     usage = action_usage.get(usage_key, 0)
     if usage >= 1:
-        await callback_query.answer("Clean up unavailable (maybe expired or not found).", show_alert=True)
+        await callback_query.answer("Clean up unavailable (maybe expired)", show_alert=True)
         return
     action_usage[usage_key] = usage + 1
     stored = user_transcriptions.get(chat_id, {}).get(msg_id)
     if not stored:
-        await callback_query.answer("Clean up unavailable (maybe expired or not found).", show_alert=True)
+        await callback_query.answer("Clean up unavailable (maybe expired)", show_alert=True)
         return
     stored_text = stored.get("text")
     orig_msg_id = stored.get("origin")
@@ -487,7 +487,7 @@ async def clean_up_callback(client, callback_query: CallbackQuery):
         loop = asyncio.get_event_loop()
         lang = get_user_lang(uid, "en")
         mode = get_user_mode(uid, "📄 Text File")
-        instruction = f"Clean and normalize this transcription Remove ASR artifacts like [inaudible], repeated words, filler noises, timestamps, and incorrect punctuation. Produce a clean, well-punctuated, readable text Also, translate the text into (lang={lang}).If translatin is Somali, write the numbers in the Somali style, like 2025 as 'labada kun labaatan iyo shantii,' and translate it to be easily understood and simpler Do not add introductions or explanations."
+        instruction = f"Translate the text in Somali a simplified/straightforward way. write the numbers in the Somali style, like 2025 as 'labada kun labaatan iyo shantii Do not add introductions or explanations."
         cleaned_text = await loop.run_in_executor(None, ask_gemini, stored_text, instruction)
         if not cleaned_text:
             await client.send_message(chat_id, "No cleaned text returned.", reply_to_message_id=orig_msg_id)
@@ -523,12 +523,12 @@ async def get_key_points_callback(client, callback_query: CallbackQuery):
     usage_key = f"{chat_id}|{msg_id}|summarize"
     usage = action_usage.get(usage_key, 0)
     if usage >= 1:
-        await callback_query.answer("Summarize unavailable (maybe expired or not found).", show_alert=True)
+        await callback_query.answer("Summarize unavailable (maybe expired)", show_alert=True)
         return
     action_usage[usage_key] = usage + 1
     stored = user_transcriptions.get(chat_id, {}).get(msg_id)
     if not stored:
-        await callback_query.answer("Summarize unavailable (maybe expired or not found).", show_alert=True)
+        await callback_query.answer("Summarize unavailable (maybe expired)", show_alert=True)
         return
     stored_text = stored.get("text")
     orig_msg_id = stored.get("origin")

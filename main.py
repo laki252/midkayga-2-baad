@@ -487,7 +487,7 @@ async def clean_up_callback(client, callback_query: CallbackQuery):
         loop = asyncio.get_event_loop()
         lang = get_user_lang(uid, "en")
         mode = get_user_mode(uid, "📄 Text File")
-        instruction = f"Translate the text in Somali a simplified/straightforward way. write the numbers in the Somali style, like 2025 as 'labada kun labaatan iyo shantii Do not add introductions or explanations."
+        instruction = f"Translate the text in Somali ha uturjumin qoraalka si eray eray ah u turjum si dabiici ah oo lafudu dee yay write the numbers in the Somali style, like 2025 as 'labada kun labaatan iyo shantii Do not add introductions or explanations."
         cleaned_text = await loop.run_in_executor(None, ask_gemini, stored_text, instruction)
         if not cleaned_text:
             await client.send_message(chat_id, "No cleaned text returned.", reply_to_message_id=orig_msg_id)

@@ -525,7 +525,7 @@ async def clean_up_callback(client, callback_query: CallbackQuery):
         uid = callback_query.from_user.id
         lang = get_user_lang(uid, "en")
         mode = get_user_mode(uid, "📄 Text File")
-        instruction = f"Clean and normalize this transcription (lang={lang}). Remove ASR artifacts like [inaudible], repeated words, filler noises, timestamps, and incorrect punctuation. Produce a clean, well-punctuated, readable text in the same language. Do not add introductions or explanations."
+        instruction = f"Clean and normalize this transcription (lang={lang}). Remove ASR artifacts like [inaudible], repeated words, filler noises, timestamps, and incorrect punctuation. Produce a clean, well-punctuated, readable text . Do not add introductions or explanations."
         cleaned_text = await loop.run_in_executor(None, ask_gemini, stored_text, instruction)
         if not cleaned_text:
             await client.send_message(chat_id, "No cleaned text returned.", reply_to_message_id=orig_msg_id)

@@ -146,7 +146,7 @@ def ask_gemini(text, instruction, timeout=REQUEST_TIMEOUT_GEMINI):
     if not gemini_rotator.keys: raise RuntimeError("No GEMINI keys available")
     last_exc = None
     for key in gemini_rotator.get_order():
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={key}"
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={key}"
         payload = {"contents": [{"parts": [{"text": instruction}, {"text": text}]}]}
         headers = {"Content-Type": "application/json"}
         try:

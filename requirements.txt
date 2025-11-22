@@ -19,4 +19,4 @@ motor
 dnspython
 quart
 pyTelegramBotAPI
-genai
+

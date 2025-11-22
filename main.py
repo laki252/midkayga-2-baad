@@ -558,9 +558,9 @@ TELE_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "8378888955:AAH51OZ3ZIjGtEZTkZ
 WEBHOOK_URL = os.environ.get("WEBHOOK_URL", "https://midkayga-2-baad-y8r7.onrender.com")
 telebot_bot = telebot.TeleBot(TELE_TOKEN)
 
-@telebot_bot.message_handler(commands=['online'])
+@telebot_bot.message_handler(commands=['start'])
 def handle_online(message):
-    telebot_bot.send_message(message.chat.id, "yes Im alive ✅")
+    telebot_bot.send_message(message.chat.id, "🤡")
 
 @flask_app.route("/set_webhook", methods=["GET"])
 def set_wh():

@@ -22,7 +22,7 @@ API_ID = int(os.environ.get("API_ID", "29169428"))
 API_HASH = os.environ.get("API_HASH", "55742b16a85aac494c7944568b5507e5")
 
 BOT1_TOKEN = os.environ.get("BOT1_TOKEN", "7790991731:AAF4NHGm0BJCf08JTdBaUWKzwfs82_Y9Ecw")
-BOT2_TOKEN = os.environ.get("BOT2_TOKEN", "7770743573:AAGovhDxwzYyn9vZhC-RBCtqe6OoT2a6ZHA")
+BOT2_TOKEN = os.environ.get("BOT2_TOKEN", "7757263177:AAEJy_de-IOP11BOrgY0HMj-cvhy_CezGDU")
 
 WEBHOOK_URL_BASE = os.environ.get("WEBHOOK_URL_BASE", "https://midkayga-2-baad-y8r7.onrender.com")
 PORT = int(os.environ.get("PORT", 8080))
